@@ -1,9 +1,10 @@
 import { babel } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs'
+import typescript from 'rollup-plugin-typescript2'
 
 export default {
-  input: 'src/index.js',
+  input: 'src/index.ts',
   output: [
     {
       file: 'dist/reco.cjs.js',
@@ -21,6 +22,7 @@ export default {
   ],
   plugins: [
     nodeResolve(), // 解析依赖的引用
+    typescript(),
     babel({ 
       exclude: ['node_modules/**'], // 当不排除 node_modules 的时候需要排除 core-js
       // babelHelpers: 'runtime',

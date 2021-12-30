@@ -5,7 +5,8 @@
   "author": "reco_luan",
   "license": "MIT",
   "scripts": {
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -14,7 +15,11 @@
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.1",
-    "rollup": "^2.61.1"
+    "@rollup/plugin-typescript": "^8.3.0",
+    "rollup": "^2.61.1",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.5",
